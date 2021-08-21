@@ -1,0 +1,189 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.header {
+    width: 100%;
+    height: 18vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.code-jam-logo {
+    float: left;
+    margin-left: 2em;
+    width: 20%;
+    height: 100%;
+}
+
+.code-jam-icon {
+    float: left;
+    width: 75px;
+    height: 75px;
+    padding-top: 5vh;
+}
+
+.title {
+    float: left;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 50px;
+    padding-left: 0.5em;
+    padding-top: 1.25em;
+}
+
+.left {
+    position: relative;
+    width: 50%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.select-lang-div{
+    float: left;
+    margin-top: 2.5em;
+    margin-left: 10em;
+}
+
+.select-header{
+    float: left;
+    color: #4a4a4a;
+}
+
+.form-select{
+    float: left;
+    margin-left: 10px;
+}
+
+.buttons {
+    width: 100%;
+    height: 18vh;
+    margin-top: -30px;
+    bottom: 0;
+    text-align: center;
+}
+
+.project-title {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    border: 1px solid #b7b7b7;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font: normal 30px/normal 'Varela Round', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(252, 252, 252, 1);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2) inset;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    left: 0;
+    outline: none;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.short-description {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    border: 1px solid #b7b7b7;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font: normal 30px/normal 'Varela Round', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(252, 252, 252, 1);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2) inset;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    width: 25em;
+    height: 20em;
+    outline: none;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.share-btn {
+    position: absolute;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 20px 100px;
+    border: none;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    font: normal 30px/normal 'Varela Round', sans-serif;
+    color: rgba(91, 91, 91, 1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgb(250, 250, 250);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: -1px -1px 0 rgba(99, 99, 99, 0.66);
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    outline: none;
+    bottom: 10px;
+    left: 42.5%;
+    right: 42.5%;
+}
+
+.share-btn:hover {
+    position: absolute;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 20px 100px;
+    border: none;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    font: normal 30px/normal 'Varela Round', sans-serif;
+    color: rgba(91, 91, 91, 1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgb(240, 240, 240);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: -1px -1px 0 rgba(99, 99, 99, 0.66);
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    outline: none;
+    margin-top: 14%;
+    bottom: 15px;
+}

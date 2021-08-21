@@ -1,0 +1,91 @@
+@media only screen and (min-width: 1224px) {
+    * {
+        padding: 0;
+        margin: 0;
+        outline: none;
+    }
+
+    .left {
+        position: relative;
+        float: left;
+        width: 60%;
+        height: 100vh;
+        background-color: #201434;
+    }
+
+    .right {
+        float: left;
+        position: relative;
+        width: 40%;
+        height: 100vh;
+        background-color: #1B2340;
+    }
+
+    .why-title {
+        float: right;
+        margin-right: 25%;
+        margin-top: 20%;
+        width: 50%;
+        font-family: 'Nanum Gothic Coding', monospace;
+        font-size: 40px;
+        text-align: right;
+        color: #ffffff;
+    }
+
+    .why-text {
+        float: right;
+        margin-right: 25%;
+        margin-top: 10%;
+        width: 70%;
+        font-family: 'Nanum Gothic Coding', monospace;
+        font-size: 30px;
+        text-align: right;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .registration-title {
+        font-family: 'Nanum Gothic Coding', monospace;
+        font-weight: lighter;
+        font-size: 50px;
+        text-align: center;
+        margin-top: 10vh;
+        margin-bottom: 25%;
+        color: #ffffff;
+    }
+
+    .entry {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Valerna Round", sans-serif;
+        font-size: 34px;
+        border: 2px solid #ffffff;
+        border-radius: 50px;
+        padding: 15px;
+        width: 15em;
+        background-color: #1B2340;
+        margin-top: 5%;
+    }
+
+    .submit {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Valerna Round", sans-serif;
+        font-size: 34px;
+        border: 2px solid #ffffff;
+        border-radius: 50px;
+        background-color: #1B2340;
+        padding: 15px;
+        width: 16em;
+        margin-top: 25%;
+        color: #ffffff;
+    }
+
+    .error {
+        font-family: 'Valerna Round', sans-serif;
+        margin-top: 5px;
+        margin-left: 15%;
+        color: red;
+    }
+}

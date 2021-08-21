@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Jam - Login</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Varela+Round&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="left">
+    <h2 class="why-title">Why registration is required?</h2>
+    <h3 class="why-text">Thanks to registration on Code Jam, you can share your projects, discuss other people's
+        projects, correspond
+        with other users, declare hackatons, and Game James</h3>
+    <h2 class="why-title">Already have an account? <i><a href="/authorization"
+                                                         style="text-decoration: none; color: #ffffff;">Sign in!</a></i>
+    </h2>
+</div>
+<div class="right">
+    <h3 class="registration-title">Registration</h3>
+    <form action="/add-user" method="post">
+        <label><input class="entry" name="user-name" type="text" maxlength="50" placeholder="User name"
+                      autofocus></label>
+    <!--
+        {% if user_error %}
+            <h4 class="error">The user with such nickname already exists!</h4>
+        {% endif %}
+        -->
+        <label><input class="entry" name="user-password" type="password" maxlength="100" placeholder="Password"></label>
+        <label><input class="entry" name="user-repeat-password" type="password" maxlength="100"
+                      placeholder="Repeat password"></label>
+    <!--
+        {% if password_error %}
+            <h4 class="error">Passwords must coincide!</h4>
+        {% endif %}
+        -->
+        <label><input class="submit" type="submit" maxlength="100" value="Register"></label>
+    </form>
+</div>
+</body>
+</html>

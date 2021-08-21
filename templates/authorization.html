@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Jam - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Varela+Round&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+<div class="left">
+    <h2 class="why-title">Why registration is required?</h2>
+    <h3 class="why-text">Thanks to registration on Code Jam, you can share your projects, discuss other people's
+        projects, correspond
+        with other users, declare hackatons, and Game James</h3>
+    <h2 class="why-title">Not yet registered? <i><a href="/login" style="text-decoration: none">Sign up!</a></i></h2>
+</div>
+<div class="right">
+    <h3 class="registration-title">Authorization</h3>
+    <form action="" method="post">
+        <label><input class="entry" name="user-name" type="text" maxlength="50" placeholder="User name"
+                      autofocus></label>
+        <label><input class="entry" name="user-password" type="password" maxlength="100" placeholder="Password"></label>
+        {% if password_error %}
+            <h4 class="error">Username or password are incorrect!</h4>
+        {% endif %}
+        <label><input class="submit" type="submit" maxlength="100" value="Sign In"></label>
+    </form>
+</div>
+</body>
+</html>

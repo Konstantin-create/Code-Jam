@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Code Jam - Posts</title>{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+{% block fonts %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Varela+Round&display=swap"
+          rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div class="community-header">
+        <div class="community-header-content">
+            <div class="title-block">
+                <img class="community-icon" src="{{ url_for('static', filename=img) }}" alt="">
+                <a href="/posts" class="community-back-btn"><img class="community-back-img"
+                                                                 src="{{ url_for('static', filename='img/back.png') }}"
+                                                                 alt=""><h4 style="margin-top: 15px">Back to
+                    communities</h4>
+                </a>
+                <h2 class="community-title">{{ group }}</h2>
+                <hr>
+                <h2 class="community-text">{{ description }}</h2>
+            </div>
+        </div>
+        <div class="description multiline-text">
+        </div>
+    </div>
+    <div class="main-container">
+        {% if posts|length < 1 %}
+            <h2 style="text-align: center; margin-top: 20%; font-family: 'Nanum Gothic Coding', monospace; font-size: 50px;
+                        font-weight: lighter">
+                No posts in this category. Be the first! 😉</h2>
+        {% else %}
+            {% for el in posts %}
+                <div class="item">
+                    <h2 class="item-title">{{ el.title }}</h2>
+                    <p class="item-short-description">Short description: {{ el.short_discription }}</p>
+                    <div class="item-buttons">
+                        <a class="item-btn-download" href="/download/{{ el.id }}">Download {{ el.file_name }}</a>
+                    </div>
+                    {% set a = liked(el.id, current_user.id) %}
+                    <h2>{{ a }}</h2>
+                    {% if a %}
+                        <button onclick="{{ set_like('offset', el.id, current_user.id) }}" style="border: none"><img
+                                class="item-like"
+                                src="{{ url_for('static', filename="img/likes/just-pressed.png") }}" alt="">
+                        </button>
+                    {% else %}
+                        <button onclick="{{ set_like('set', el.id, current_user.id) }}" style="border: none">
+                            <img class="item-like" src="{{ url_for('static', filename="img/likes/no-pressed.png") }}"
+                                 alt="">
+                        </button>
+                    {% endif %}
+                    <p class="item-date">Date: {{ el.date.date() }}</p>
+                    <p class="item-author"><a
+                            href="/profile/{{ el.create_by_id }}">Author: {{ el.create_by_username }}</a></p>
+                </div>
+            {% endfor %}
+            <div style="clear: both"></div>
+            {% if all_posts %}
+                <a class="more-projects-btn"
+                   href="/posts/{{ posts_type }}/{{ page_id + 1 }}">More projects</a>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}

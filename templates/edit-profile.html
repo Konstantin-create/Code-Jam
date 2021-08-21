@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Jam - Edit Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Varela+Round&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit-profile.css') }}">
+</head>
+<body>
+<div class="main">
+    <form method="post" action="/set-profile-info">
+        <div class="content">
+            <h2 class="title">Edit your profile! </h2>
+            <div class="item-1">
+                <h2 class="profile-description-title"><a href="#footer"
+                                                         style="text-decoration: none; color: rgba(0, 0, 0, 0.5);">Description:</a>
+                </h2>
+                {% if current_user.user_description == None %}
+                    <label>
+                        <textarea class="profile-description" name="profile-description"
+                                  maxlength="200" tabindex="1" autofocus></textarea>
+                    </label>
+                {% else %}
+                    <label>
+                        <textarea class="profile-description" name="profile-description"
+                                  maxlength="200" tabindex="1" autofocus>{{ current_user.user_description }}</textarea>
+                    </label>
+                {% endif %}
+            </div>
+            <div class="item-2">
+                <h2 class="profile-donate-title"><a href="#footer"
+                                                    style="text-decoration: none; color: rgba(0, 0, 0, 0.5);">Donate
+                    url:</a></h2>
+                <label>
+                    <input class="profile-donate" type="url"
+                           name="profile-donate"
+                           tabindex="2">
+                </label>
+            </div>
+        </div>
+        <div class="buttons">
+            <div>
+                <button class="confirm-btn" type="submit" tabindex="5">Confirm</button>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+    </form>
+</div>
+<div class="footer" id="footer">
+    <h2 class="footer-text">Description will show in the header of your profile</h2>
+    <h2 class="footer-text">Donate URL is needed to support the authors of the programs, you can specify a link to the
+        Donation Alerts or
+        other service to receive donates</h2>
+</div>
+</body>
+</html>

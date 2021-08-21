@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Code Jam - Main Page</title>{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+{% block fonts %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Varela+Round&display=swap"
+          rel="stylesheet">
+{% endblock %}
+
+{% block buttons %}
+    <div class="user-info">
+        <img src="{{ url_for('static', filename='img/user-logo.png') }}" alt="" class="user-logo">
+        <h3 class="username">{{ short_name(current_user.username) }}</h3>
+        <div style="margin-top: 16%">
+            <button class="accordion"><img src="{{ url_for('static', filename='img/arrow-down.png') }}"
+                                           style="width: 50px; height: 50px; line-height: 100%" alt=""></button>
+            <div class="panel">
+                <div class="panel-item">
+                    <a href="/profile/{{ current_user.id }}"><h4 style="font-weight: 100">Profile</h4></a>
+                </div>
+                <div class="panel-item">
+                    <a href="/profile/{{ current_user.id }}/projects"><h4 style="font-weight: 100">Your projects</h4>
+                    </a>
+                </div>
+                <div class="panel-item">
+                    <a href="/profile/{{ current_user.id }}/events"><h4 style="font-weight: 100">Your events</h4></a>
+                </div>
+                <div class="panel-item">
+                    <a href="/logout"><h4 style="font-weight: 100">Exit</h4></a>
+                </div>
+                <div class="panel-item">
+                    <a href="/profile/{{ current_user.id }}/delete"><h4 style="font-weight: 100">Delete account</h4></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div class="main">
+        <a href="/posts">
+            <div class="group-item">
+                <img class="group-icon" src="{{ url_for('static', filename='img/posts.png') }}" alt="">
+                <div class="group-text">
+                    <h2 class="group-title">Sharing the projects</h2>
+                    <h3 class="group-description">Here you will find interesting projects. And of course you can share
+                        ou works</h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="clear" style="clear: both"></div>
+    <footer>
+        <h3 class="footer-item">Here could be your advertisement</h3>
+    </footer>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

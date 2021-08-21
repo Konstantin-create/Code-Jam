@@ -1,0 +1,372 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    outline: none;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.header {
+    padding-top: 1px;
+    height: 18vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    float: left;
+    margin-left: 2em;
+    width: 20%;
+    height: 100%;
+}
+
+.icon {
+    float: left;
+    width: 75px;
+    height: 75px;
+    padding-top: 5vh;
+    box-sizing: content-box;
+}
+
+.title {
+    float: left;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 50px;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+}
+
+.new-project {
+    float: right;
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding-right: 30px;
+    padding-left: 30px;
+    border: none;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    font: normal 24px "Varela Round", sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+    color: rgba(17, 17, 17, 0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(255, 181, 35, 0.9);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    margin-top: 1.5em;
+    margin-right: 2em;
+}
+
+.group-item {
+    width: 30%;
+    height: 20vh;
+    float: left;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    background-color: #c7c7c7;
+}
+
+.group-icon {
+    float: left;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.group-title {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 30px;
+    color: #000000;
+}
+
+.group-description {
+    font-family: 'Calibri Light', sans-serif;
+    font-size: 20px;
+    color: #4a4a4a;
+}
+
+.community-header {
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.community-header-content {
+    width: 50%;
+    height: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-div {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+}
+
+.change-icon{
+    display: none;
+    position: absolute;
+    background-color: rgba(89, 89, 89, 0.5);
+}
+
+.icon-div:hover .change-icon {
+    display: block;
+}
+
+.community-icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.community-title {
+    display: block;
+    margin: 0;
+    position: relative;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-weight: lighter;
+    font-size: 3em;
+    margin-left: 3em;
+}
+
+.community-back-img {
+    float: left;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: 5px;
+}
+
+.community-back-btn {
+    position: relative;
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    width: 250px;
+    height: 55px;
+    border: none;
+    font: normal 20px "Varela Round", sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+    color: rgba(17, 17, 17, 0.6);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+hr {
+    margin: 50px;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.community-text {
+    font-family: 'Valerna Round', sans-serif;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.main-container {
+    margin-top: 5vh;
+}
+
+.profile-projects {
+    font-family: 'Valerna Round', sans-serif;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 50px;
+    margin: 30px;
+}
+
+.profile-donate-btn {
+    font-family: 'Valerna Round', sans-serif;
+    background: rgba(255, 181, 35, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.posts-title {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 75px;
+    font-weight: lighter;
+}
+
+.item {
+    position: relative;
+    width: 30%;
+    height: 25vh;
+    float: left;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    background-color: #c7c7c7;
+}
+
+.item-title {
+    font-family: 'Valerna Round', sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.item-short-description {
+    position: relative;
+    width: 98%;
+    word-break: break-word;
+    font-family: 'Valerna Round', sans-serif;
+    padding-left: 10px;
+}
+
+.item-buttons {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+}
+
+.item-btn-download {
+    font-family: 'Valerna Round', sans-serif;
+    background: rgba(255, 181, 35, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.item-date {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    text-align: center;
+    color: #000000;
+}
+
+.item-author {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    text-align: center;
+    color: #000000;
+}
+
+.user-info {
+    position: absolute;
+    width: 30%;
+    height: 18vh;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.user-logo {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 4vh 5%;
+}
+
+.username {
+    float: left;
+    margin: 6.5vh 5%;
+    font-family: 'Valerna Round', sans-serif;
+    font-weight: lighter;
+    color: #1e1e1e;
+    font-size: 40px;
+}
+
+.all-projects-btn {
+    font-family: 'Valerna Round', sans-serif;
+    background: rgba(255, 181, 35, 0.9);
+    padding: 20px 10%;
+    border-radius: 10px;
+    margin: 60px 37.5%;
+}
+
+.accordion {
+    position: absolute;
+    margin: -3vh 0;
+    right: 20px;
+    float: right;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.5s;
+    border-radius: 50px;
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    height: 30vh;
+    background-color: #f2f2f2;
+    margin-top: 7vh;
+}
+
+.panel-item {
+    width: 100%;
+    height: 4vh;
+    line-height: 4vh;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: 'Valerna Round', sans-serif;
+    font-size: 25px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.panel-item:hover {
+    background-color: #cacaca;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: #000000;
+    margin-top: auto;
+    margin-top: 25px;
+}
+
+.footer-item {
+    font-family: 'Valerna Round', sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    color: #ffffff;
+    text-align: center;
+    line-height: 10vh;
+}

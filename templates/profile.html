@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Code Jam - Posts Page</title>{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+{% block fonts %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Varela+Round&display=swap"
+          rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div class="community-header">
+        <div class="community-header-content">
+            <div class="title-block">
+                <div class="icon-div">
+                    <img class="community-icon" src="{{ profile_logo_path }}" alt="">
+                </div>
+                <a href="/" class="community-back-btn"><img class="community-back-img"
+                                                            src="{{ url_for('static', filename='img/back.png') }}"
+                                                            alt=""><h4 style="margin-top: 15px">Back</h4>
+                </a>
+                {% if  user.username == current_user.username %}
+                    <h2 class="community-title">{{ user.username }} <a href="/edit-profile/{{ user.id }}"><img
+                            src="{{ url_for('static', filename='img/edit.png') }}" alt=""
+                            style="width:30px; height: 30px"></a></h2>
+                {% else %}
+                    {% if user.donate_link %}
+                        <h2 class="community-title">{{ user.username }} <a class="profile-donate-btn"
+                                                                           href="{{ user.donate_link }}">Donate
+                            author</a>
+                        </h2>
+                    {% else %}
+                        <h2 class="community-title">{{ user.username }}</h2>
+                    {% endif %}
+                {% endif %}
+                <hr>
+                <h2 class="community-text">{{ description }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <h2 class="profile-projects">Projects:</h2>
+        {% for el in posts %}
+            <div class="item">
+                <h2 class="item-title">{{ el.title }}</h2>
+                <p class="item-short-description">Short description: {{ el.short_discription }}</p>
+                <div class="item-buttons">
+                    <a class="item-btn-download" href="/download/{{ el.id }}">Download {{ el.file_name }}</a>
+                </div>
+                <p class="item-date">Date: {{ el.date.date() }}</p>
+                <p class="item-author"><a
+                        href="/profile/{{ el.create_by_id }}">Author: {{ el.create_by_username }}</a></p>
+            </div>
+        {% endfor %}
+        {% if posts|length < 1 %}
+            <h2 style="text-align: center; margin-top: 10%; font-family: 'Nanum Gothic Coding', monospace; font-size: 50px;
+                        font-weight: lighter">
+                This user has no projects! 😕</h2>
+        {% else %}
+            {% if more_projects %}
+                <div class="clear" style="clear: both"></div>
+                <a class="all-projects-btn"
+                   href="/profile/{{ user.id }}/projects">All projects</a>
+            {% endif %}
+        {% endif %}
+    </div>
+    <div class="clear" style="clear: both"></div>
+    <footer>
+        <h3 class="footer-item">Here could be your advertisement</h3>
+    </footer>
+{% endblock %}

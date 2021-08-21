@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}{% endblock %}
+    {% block style %}{% endblock %}
+    {% block fonts %}{% endblock %}
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <a href="/"><img class="icon" src="{{ url_for('static', filename='img/icon.png') }}" alt=""></a>
+        <a href="/"><h2 class="title">Code Jam</h2></a>
+    </div>
+    {% block buttons %}{% endblock %}
+</div>
+{% block body %}{% endblock %}
+</body>
+</html>
+{% block scripts %}{% endblock %}

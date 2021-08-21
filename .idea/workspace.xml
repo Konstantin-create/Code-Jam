@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="186ccfb1-7469-43e9-920f-99a0c51f7e8e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="posts" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1vXLvSxDtwjAKYxoXOjXMKMEovc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/First" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\docs\Kostua\HTML\CodeJam\First" />
+      <recent name="D:\docs\Kostua\HTML\CodeJam\static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\docs\Kostua\HTML\CodeJam\First" />
+      <recent name="D:\docs\Kostua\HTML\CodeJam" />
+      <recent name="D:\docs\Kostua\HTML\CodeJam\code" />
+      <recent name="D:\docs\Kostua\HTML\CodeJam\static\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Flask server.Flask (app.py)">
+    <configuration name="registaration.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CodeJam/templates/registaration.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="CodeJam" type="Python.FlaskServer">
+      <module name="CodeJam" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="CodeJam" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flask server.Flask (app.py)" />
+        <item itemvalue="JavaScript Debug.registaration.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="186ccfb1-7469-43e9-920f-99a0c51f7e8e" name="Default Changelist" comment="" />
+      <created>1626703717330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626703717330</updated>
+      <workItem from="1626703720180" duration="329000" />
+      <workItem from="1626712854353" duration="17438000" />
+      <workItem from="1626795730062" duration="176000" />
+      <workItem from="1626800112938" duration="16100000" />
+      <workItem from="1626879879969" duration="4851000" />
+      <workItem from="1626889349344" duration="14151000" />
+      <workItem from="1626977656015" duration="995000" />
+      <workItem from="1627111558976" duration="10070000" />
+      <workItem from="1627197993906" duration="6508000" />
+      <workItem from="1627211474268" duration="1479000" />
+      <workItem from="1627213452535" duration="32769000" />
+      <workItem from="1627458955021" duration="51000" />
+      <workItem from="1627481006249" duration="3263000" />
+      <workItem from="1627542215670" duration="6824000" />
+      <workItem from="1627651319057" duration="345000" />
+      <workItem from="1627716457020" duration="3594000" />
+      <workItem from="1627722994560" duration="37000" />
+      <workItem from="1628445992551" duration="304000" />
+      <workItem from="1628493471319" duration="607000" />
+      <workItem from="1628860062801" duration="411000" />
+      <workItem from="1628860937369" duration="15013000" />
+      <workItem from="1628959653682" duration="32367000" />
+      <workItem from="1629110568753" duration="1481000" />
+      <workItem from="1629112283697" duration="2365000" />
+      <workItem from="1629116959215" duration="1904000" />
+      <workItem from="1629129659082" duration="5403000" />
+      <workItem from="1629183775297" duration="9294000" />
+      <workItem from="1629215002269" duration="13735000" />
+      <workItem from="1629301806396" duration="7692000" />
+      <workItem from="1629314813220" duration="15736000" />
+      <workItem from="1629383890613" duration="3676000" />
+      <workItem from="1629388979512" duration="3984000" />
+      <workItem from="1629398194961" duration="12682000" />
+      <workItem from="1629472316610" duration="3090000" />
+      <workItem from="1629483806426" duration="4181000" />
+      <workItem from="1629535012969" duration="10641000" />
+    </task>
+    <task id="LOCAL-00001" summary="////">
+      <created>1629548378928</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629548378928</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add some files">
+      <created>1629549657368</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629549657368</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add some files">
+      <created>1629554010173</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629554010173</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="////" />
+    <MESSAGE value="Add some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some files" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CodeJam$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1629553970533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CodeJam$CodeJam.coverage" NAME="CodeJam Coverage Results" MODIFIED="1626778074052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Jam - Opening soon</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.png">
+</head>
+<body id="body">
+<header>
+    <h2 class="header-title unselectable">Code Jam - Opening soon</h2>
+</header>
+<main id="main">
+    <div id="bg"></div>
+    <script src="three.r119.min.js"></script>
+    <script src="vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+            el: "#bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+    </script>
+    <div class="why-code-jam">
+        <div class="why-left">
+            <div class="why-code-jam-text-div">
+                <h1 class="why-code-jam-title unselectable">Why Code Jam?</h1>
+                <h2 class="why-code-jam-text unselectable">Code Jam is a place where programmers and designers of any
+                    level can
+                    communicate to discuss ideas, upload their projects and watch others. Also in the profile you can
+                    position the link to the reception of Donates</h2>
+            </div>
+        </div>
+        <div class="arrow-1 unselectable">
+            <button onclick="middleFunction()" style="border: none; background-color: rgba(0, 0, 0, 0)">
+                <svg id="more-arrows">
+                    <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+                    <polygon class="arrow-middle"
+                             points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+                    <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+                </svg>
+            </button>
+        </div>
+        <div class="when-right">
+            <h2 class="date-text unselectable">When Code Jam opens?</h2>
+            <div class="unselectable" id="demo"></div>
+            <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Sep 9, 2021 9:9:9").getTime();
+
+                // Update the count down every 1 second
+                var x = setInterval(function () {
+
+                    // Get today's date and time
+                    var now = new Date().getTime();
+
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Display the result in the element with id="demo"
+                    document.getElementById("demo").innerHTML = days + "d " + "| " + hours + "h " + "| "
+                        + minutes + "m " + "| " + seconds + "s ";
+
+                    // If the count down is finished, write some text
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById('demo').innerHTML = "Update page to start!"
+                    }
+                }, 1000);
+            </script>
+            <h2 class="date-description unselectable">After the timer expires, you will be redirected to the Registrar's
+                page.</h2>
+        </div>
+        <div class="arrow-2 unselectable">
+            <button onclick="bottomFunction()" style="border: none; background-color: rgba(0, 0, 0, 0)">
+                <svg id="more-arrows">
+                    <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+                    <polygon class="arrow-middle"
+                             points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+                    <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="most-popular-questions" id="popular-questions">
+        <h2 class="questions-title unselectable">The most popular questions</h2>
+        <div class="tabs unselectable">
+            <div class="tab">
+                <input type="radio" id="rd1" name="rd">
+                <label class="tab-label" for="rd1">Will my entered security passwords be?</label>
+                <div class="tab-content">
+                    Yes, of course, passwords are not stored on our server in its original form - they are encrypted.
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" id="rd2" name="rd">
+                <label class="tab-label" for="rd2">How many projects can post 1 user and how many hacatons 1 user can
+                    participate?</label>
+                <div class="tab-content">
+                    There are no restrictions on projects for projects, as in the participation and creation of hakaton.
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" id="rd3" name="rd">
+                <label class="tab-label" for="rd3">Will advertising on the site?</label>
+                <div class="tab-content">
+                    Unfortunately advertising on the site will be present 😔 <b>but</b> only in the bottom of some
+                    pages.
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" id="rd4" name="rd">
+                <label class="tab-label" for="rd4">Will the site transfer to other languages?</label>
+                <div class="tab-content">
+                    Of course it will, but not immediately.
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" id="rd5" name="rd">
+                <label class="tab-label" for="rd5">Is it possible to view posts to unregistered users?</label>
+                <div class="tab-content">
+                    No, it is impossible, because Unregistered user will not be able to like and comment other posts, he
+                    will also not be able to publish his projects, so I decided to remove these possibilities of
+                    unregistered user.
+                </div>
+            </div>
+            <!--https://forms.gle/7tsm9tpU7f9SQsyv9-->
+            <div class="tab">
+                <input type="radio" id="rd6" name="rd">
+                <label class="tab-label" for="rd6">I want to advertise on this site how do I do it?</label>
+                <div class="tab-content">
+                    First, follow the <a href="https://forms.gle/7tsm9tpU7f9SQsyv9"><i>link</i></a>, fill out the form,
+                    do not forget to specify a valid phone or e-mail, after a
+                    while after filling out the form you will contact you.
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" id="rd7" name="rd">
+                <label class="tab-label" for="rd7">Is it possible to open this site from the phone?</label>
+                <div class="tab-content">
+                    No, it is impossible, I considered it unless, because view .py or .js files from the phone or tablet
+                    is practically not possible
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" id="rd8" name="rd">
+                <label for="rd8" class="tab-close">Close others &times;</label>
+            </div>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">☝</button>
+    <script>
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        function middleFunction() {
+            document.body.scrollTop = window.innerHeight;
+            document.documentElement.scrollTop = window.innerHeight;
+        }
+
+        function bottomFunction() {
+            document.body.scrollTop = window.innerHeight * 2;
+            document.documentElement.scrollTop = window.innerHeight * 2;
+        }
+    </script>
+</main>
+</body>
+</html>
