@@ -27,7 +27,7 @@ migrate = Migrate(app, db)
 # Data base
 class Posts(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
+    title = db.Column(db.String(20), nullable=False)
     short_discription = db.Column(db.String(300), nullable=False)
     full_discription = db.Column(db.String(100), nullable=True)
     project_type = db.Column(db.String(10), nullable=False)
@@ -45,9 +45,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), index=True, unique=True)
     password_hash = db.Column(db.String(128))
-    icon_img = db.Column(db.Text, unique=True)
-    icon_name = db.Column(db.Text)
-    icon_mimetype = db.Column(db.Text)
+    icon_img = db.Column(db.LargeBinary, unique=True)
     user_description = db.Column(db.Text(300))
     donate_link = db.Column(db.String(300))
 
@@ -102,7 +100,10 @@ def set_like(action, post_id, user_id):
 @app.route('/', methods=['GET', 'POST'])
 @login_required
 def main():
-    return render_template('index.html', short_name=short_name)
+    custom_img = False
+    if current_user.icon_img is not None:
+        custom_img = True
+    return render_template('index.html', short_name=short_name, custom_img=custom_img, icon_data=current_user.icon_img)
 
 
 @app.route('/login')
@@ -139,13 +140,13 @@ def add_user():
 def authorization():
     if request.method == 'POST':
         if current_user.is_authenticated:
-            return redirect(url_for('index'))
+            return redirect('/')
         user_name = request.form.get('user-name')
         password = request.form.get('user-password')
         user = User.query.filter_by(username=user_name).first()
         if user and check_password_hash(user.password_hash, password):
             login_user(user, remember=True)
-            return redirect(url_for('main'))
+            return redirect('/')
         return render_template('authorization.html', password_error=True)
     return render_template('authorization.html')
 
@@ -379,19 +380,24 @@ def edit_profile(id):
         return 'You do not have access to this page.'
 
 
-@app.route('/set-profile-info', methods=['POST'])
+@app.route('/set-profile-info', methods=['GET', 'POST'])
 @login_required
 def set_profile_info():
-    user = current_user
-    description = str(request.form.get('profile-description'))
-    donate_link = str(request.form.get('profile-donate'))
-    if description is not None:
-        description = description.strip()
-    if donate_link is not None:
-        donate_link = description.strip()
+    if request.method == 'POST':
+        user = current_user
+        description = str(request.form.get('profile-description'))
+        donate_link = str(request.form.get('profile-donate'))
+        img = request.files.get('img-input')
+        print(img)
+        if description is not None:
+            description = description.strip()
+        if donate_link is not None:
+            donate_link = description.strip()
 
-    user.user_description = description
-    user.donate_link = donate_link
+        user.user_description = description
+        user.donate_link = donate_link
+        #user.icon_img = img.read()
+
 
     try:
         db.session.commit()
@@ -407,4 +413,4 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=9000, debug=False)
+    app.run(host='127.0.0.1', port=9000, debug=False)

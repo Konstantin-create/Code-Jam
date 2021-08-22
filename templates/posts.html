@@ -17,7 +17,7 @@
             <div class="title-block">
                 <img class="community-icon" src="{{ url_for('static', filename=img) }}" alt="">
                 <a href="/posts" class="community-back-btn"><img class="community-back-img"
-                                                                 src="{{ url_for('static', filename='img/back.png') }}"
+                                                                 src="{{ url_for('static', filename='img/back-dark.png') }}"
                                                                  alt=""><h4 style="margin-top: 15px">Back to
                     communities</h4>
                 </a>
@@ -32,7 +32,7 @@
     <div class="main-container">
         {% if posts|length < 1 %}
             <h2 style="text-align: center; margin-top: 20%; font-family: 'Nanum Gothic Coding', monospace; font-size: 50px;
-                        font-weight: lighter">
+                        font-weight: lighter; color: #ffffff">
                 No posts in this category. Be the first! 😉</h2>
         {% else %}
             {% for el in posts %}
@@ -43,7 +43,6 @@
                         <a class="item-btn-download" href="/download/{{ el.id }}">Download {{ el.file_name }}</a>
                     </div>
                     {% set a = liked(el.id, current_user.id) %}
-                    <h2>{{ a }}</h2>
                     {% if a %}
                         <button onclick="{{ set_like('offset', el.id, current_user.id) }}" style="border: none"><img
                                 class="item-like"

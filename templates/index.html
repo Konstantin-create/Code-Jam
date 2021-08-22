@@ -14,27 +14,37 @@
 
 {% block buttons %}
     <div class="user-info">
-        <img src="{{ url_for('static', filename='img/user-logo.png') }}" alt="" class="user-logo">
-        <h3 class="username">{{ short_name(current_user.username) }}</h3>
+        {% if custom_img %}
+            <img id="profileImage" src="data:image/jpg;base64, {{ icon_data }}" alt="" class="user-logo">
+        {% else %}
+            <img src="{{ url_for('static', filename='img/user-logo.png') }}" alt="" class="user-logo">
+        {% endif %}
+        <div class="user">
+            <h3 class="username">{{ short_name(current_user.username) }}</h3>
+            <h3 class="user_id">Id:{{ short_name(current_user.id) }}</h3>
+        </div>
         <div style="margin-top: 16%">
             <button class="accordion"><img src="{{ url_for('static', filename='img/arrow-down.png') }}"
                                            style="width: 50px; height: 50px; line-height: 100%" alt=""></button>
             <div class="panel">
                 <div class="panel-item">
-                    <a href="/profile/{{ current_user.id }}"><h4 style="font-weight: 100">Profile</h4></a>
-                </div>
-                <div class="panel-item">
-                    <a href="/profile/{{ current_user.id }}/projects"><h4 style="font-weight: 100">Your projects</h4>
+                    <a href="/profile/{{ current_user.id }}"><h4 style="font-weight: 100; color: #ffffff;">Profile</h4>
                     </a>
                 </div>
                 <div class="panel-item">
-                    <a href="/profile/{{ current_user.id }}/events"><h4 style="font-weight: 100">Your events</h4></a>
+                    <a href="/profile/{{ current_user.id }}/projects"><h4 style="font-weight: 100; color: #ffffff;">Your
+                        projects</h4>
+                    </a>
                 </div>
                 <div class="panel-item">
-                    <a href="/logout"><h4 style="font-weight: 100">Exit</h4></a>
+                    <a href="/profile/{{ current_user.id }}/events"><h4 style="font-weight: 100; color: #ffffff;">Your
+                        events</h4></a>
                 </div>
                 <div class="panel-item">
-                    <a href="/profile/{{ current_user.id }}/delete"><h4 style="font-weight: 100">Delete account</h4></a>
+                    <a href="/logout"><h4 style="font-weight: 100; color: #ffffff">Exit</h4></a>
+                </div>
+                <div class="panel-item">
+                    <a href="/profile/{{ current_user.id }}/delete"><h4 style="font-weight: 100; color: red">Delete account</h4></a>
                 </div>
             </div>
         </div>
@@ -62,7 +72,7 @@
     <div class="main">
         <a href="/posts">
             <div class="group-item">
-                <img class="group-icon" src="{{ url_for('static', filename='img/posts.png') }}" alt="">
+                <img class="group-icon" src="{{ url_for('static', filename='img/posts-dark.png') }}" alt="">
                 <div class="group-text">
                     <h2 class="group-title">Sharing the projects</h2>
                     <h3 class="group-description">Here you will find interesting projects. And of course you can share

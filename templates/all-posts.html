@@ -13,7 +13,10 @@
 {% endblock %}
 
 {% block buttons %}
-    <a href="/share" class="new-project"><h2>Share project!</h2></a>
+    <div class="nav">
+        <a href="/share"><h2 class="new-project">Share project!</h2></a>
+        <a href="/profile/{{ current_user.id }}"><h4 class="nav-profile">Your profile</h4></a>
+    </div>
 {% endblock %}
 
 {% block body %}
